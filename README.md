@@ -35,7 +35,7 @@ Test project. Singree
 #### Запуск приложения    
 
 ```sh
-$ git clone [git-repo]
+$ git clone https://github.com/DmitryIvanov92/rssApp.git
 $ cd rssApp
 $ npm i && npm start
 ```
