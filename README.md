@@ -1,0 +1,2 @@
+# rssApp
+Test project. Singree
