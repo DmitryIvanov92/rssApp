@@ -1,0 +1,12 @@
+<h2>Settings</h2>
+
+<ul class="nav nav-tabs">
+    <li ng-class="{active: $routeSegment.contains('add')}">
+        <a href="#/rss/settings/add">Add channel</a>
+    </li>
+    <li ng-class="{active: $routeSegment.contains('edit')}">
+        <a href="#/rss/settings/edit">Edit channels list</a>
+    </li>
+</ul>
+
+<div app-view-segment="2" class="anim">No tab selected.</div>

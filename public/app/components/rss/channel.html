@@ -1,0 +1,44 @@
+
+
+<div class="col-md-6 scroll-block" ng-style="{height: scHeight + 'px'}">
+	<h3 class="text-center">{{feed.title}}</h3>
+	<hr>
+    <form class="form-horizontal text-center">
+        <input name="textinput" placeholder="Search" class="input-xlarge serch-box" type="text"
+               ng-model="searchText"/>
+    </form>
+    <div class="text-center info-box">
+	    <div class="col-md-6">
+	    	<ul></ul>
+	    	<p >News - <span ng-bind="filtered.length"></span></p>
+	    </div>
+	    <div class="col-md-6">
+	    	<ul ng-repeat="item in feed.entries | filter:searchText | unique:'author' as authors"></ul>
+        	<p>Authors - <span ng-bind="authors.length"></span></p>  
+	    </div>
+    </div>
+    <hr>
+	<ul  class="news-item"ng-repeat="item in feed.entries | filter:searchText as filtered">
+		<li class="list-unstyled" ng-class="{active: $routeSegment.contains('item.title|hash')}">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4>
+						<a ng-init="hash =(item.title|hash)" ng-href="#{{ 'rss.channel.item' | routeSegmentUrl: {hashKey: hash} }}">
+							<strong ng-bind-html="item.title"></strong>
+						</a>
+					</h4>
+				</div>
+				<div class="panel-body">
+					<span ng-bind-html="item.contentSnippet"></span>
+				</div>
+				<div class="panel-footer text-center">
+					<p>{{item.publishedDate | rssDate}}</p>
+					<p class="author-item">{{item.author}}</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="col-md-6 scroll-block" ng-style="{height: scHeight + 'px'}">
+	<div app-view-segment="2" class="anim">No selected news.</div>
+</div>

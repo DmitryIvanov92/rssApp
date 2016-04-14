@@ -1,0 +1,49 @@
+<br>
+<div class="row">
+	<div class="col-md-6 add-item">
+		<form class="form-horizontal" ng-submit="lookup()">
+			<fieldset>
+				<legend>Check the URL</legend>
+				<div class="control-group ">
+					<label class="control-label" for="lookup-url">URL</label>
+
+					<div class="controls">
+						<input id="lookup-url" name="url" type="url" placeholder="url" required
+							   ng-model="lookup.url" class="input-xlarge"/>
+					</div>
+				</div>
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary"><i class="icon-search icon-white"></i> Check</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<div class="col-md-6 edit-item">
+		<form class="form-horizontal" ng-submit="add()">
+			<fieldset>
+				<legend>Add channel</legend>
+
+				<div class="control-group ">
+					<label class="control-label" for="add-title" >Title</label>
+
+					<div class="controls">
+						<input id="add-title" name="title" type="text" placeholder="title" required
+							   ng-model="feed.title"  class="input-xlarge"/>
+					</div>
+				</div>
+
+				<div class="control-group ">
+					<label class="control-label" for="add-url">URL</label>
+
+					<div class="controls">
+						<input id="add-url" name="url" type="url" placeholder="url" required
+							   ng-model="feed.url"  class="input-xlarge"/>
+					</div>
+				</div>
+				<div class="form-actions">
+					<button type="submit" class="btn btn-success"><i class="icon-plus icon-white"></i> Add</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>

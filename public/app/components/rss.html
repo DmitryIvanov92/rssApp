@@ -1,0 +1,28 @@
+<div ng-controller="rssCtrl">
+    <div class="col-md-3">
+        <div class="well">
+            <ul class="nav">
+                
+                <h3 class="text-center">Channels <span class="badge" ng-bind="feeds.length"></span></h3>
+                <hr>
+                <li class="channel-item"
+                    ng-repeat="feed in feeds" 
+                    ng-class="{active: ('rss.channel' | routeSegmentStartsWith) && ('id' | routeSegmentParam) == feed.id}">
+                    <a ng-href="#{{ 'rss.channel' | routeSegmentUrl: {id: feed.id} }}">
+                        <span class="glyphicon glyphicon-bookmark"></span>
+                        <span ng-bind-html="feed.title"></span> 
+                    </a>
+                </li>
+                
+                <hr>
+
+                <li ng-class="{active: ('rss.settings' | routeSegmentStartsWith)}">
+                    <a href="#{{ 'rss.settings' | routeSegmentUrl }}"><span class="glyphicon glyphicon-pencil"></span> Settings </a>
+                </li>
+                
+            </ul>
+        </div>      
+    </div>
+    
+    <div class="col-md-9 anim" app-view-segment="1"></div>
+</div>

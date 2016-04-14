@@ -1,0 +1,14 @@
+{
+  "name": "rssApp",
+  "version": "0.1.0",
+  "description": "Test project. Singree",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Dmitry",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
