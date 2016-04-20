@@ -48,6 +48,7 @@ mongoose.connection.once('open', function callback() {
 		console.log('rssApp listening on port %d', this.address().port);
 		console.log('------------------------------');
 		console.log("Sorry, i didn't manage to do backend");
+		console.log('------------------------------');
 	});
 });
 

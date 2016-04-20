@@ -32,12 +32,25 @@ Test project. Singree
     
 - - -
     
-#### Запуск приложения    
+#### Установка приложения
 
 ```sh
 $ git clone https://github.com/DmitryIvanov92/rssApp.git
 $ cd rssApp
-$ npm i && npm start
+$ npm i && bower i
+```
+#### Запуск приложения (development mode)
+
+```sh
+$ npm start
+```
+
+#### Запуск приложения (production mode)
+
+```sh
+$ npm run dist
+$ cd dist/server
+$ node app
 ```
 
 [AngularJS]: <http://angularjs.org>
