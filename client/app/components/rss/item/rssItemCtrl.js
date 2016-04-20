@@ -40,7 +40,7 @@ angular.module('rssApp')
 					for(var item in frequency) {
 						arrLetters.push(item);
 						arrFreq.push(frequency[item]);
-					} 
+					}
 					var arrColors = ['#4d4d4d','#5da5da','#faa43a','#60bd68','#f17cb0','#008080','#b2912f','#2e8b57','#b276b2','#decf3f','#4682b4','#f15854','#dc143c','#b8860b','#8a2be2','#32cd32','#708090','#9400d3','#808000','#800000','#cd5c5c','#5f9ea0','#008000','#8b4513','#696969','#b0c4de'];
 					var arrObjects = [];
 					for(var j=0;j<arrLetters.length;j++) {

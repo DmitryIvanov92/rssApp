@@ -5,9 +5,10 @@
 */
 
 angular.module('rssApp.LocalObjectStorage', [])
-	.service('LocalObjectStorage', function () {
+	.service('LocalObjectStorage', function ($http) {
+
 		this.getObject = function (key) {
-			return JSON.parse(localStorage.getItem(key))
+			return JSON.parse(localStorage.getItem(key));
 		};
 
 		this.setObject = function (key, value) {
